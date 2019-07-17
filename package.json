@@ -1,0 +1,48 @@
+{
+    "name": "resource-guide-express",
+    "version": "1.0.0",
+    "description": "resource-guide use node(express + art-template) technology stack, it is a SSR project, can by route to render html file.",
+    "main": "index.js",
+    "dependencies": {
+        "art-template": "^4.13.2",
+        "aws-serverless-express": "^3.3.6",
+        "axios": "^0.19.0",
+        "bluebird": "^3.5.5",
+        "body-parser": "^1.18.2",
+        "cookie-parser": "^1.4.4",
+        "express": "^4.16.2",
+        "express-art-template": "^1.0.1",
+        "flatted": "^2.0.1",
+        "hiredis": "^0.5.0",
+        "http-proxy-middleware": "^0.19.1",
+        "node-sass": "^4.12.0",
+        "redis": "^2.8.0",
+        "showdown": "^1.9.0",
+        "sitemap-generator": "^8.4.0"
+    },
+    "devDependencies": {
+        "address": "^1.1.0",
+        "mockjs": "^1.0.1-beta3",
+        "morgan": "^1.9.1",
+        "nodemon": "^1.18.11",
+        "opn": "^6.0.0"
+    },
+    "scripts": {
+        "dev": "NODE_ENV=dev nodemon index.js",
+        "build-css": "npx node-sass -o statics/css statics/stylesheets/all.scss",
+        "start": "nodemon index.js",
+        "prod": "pm2 start index.js",
+        "deploy": "claudia update --use-local-dependencies --version production --set-env NODE_ENV=prod; aws s3 sync --delete --acl public-read statics/ s3://resources.tellusapp.com; aws cloudfront create-invalidation --distribution-id E2J7AUJSIHJT64 --paths '/*'; echo 'Check on invalidation:'; echo ;aws cloudfront get-invalidation --distribution-id E2J7AUJSIHJT64 --id [ INSERT invalidation_id ]'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zillyinc/resource-guide-express.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/zillyinc/resource-guide-express/issues"
+    },
+    "homepage": "https://github.com/zillyinc/resource-guide-express#readme"
+}
