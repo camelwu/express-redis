@@ -1,19 +1,17 @@
 {
     "name": "resource-guide-express",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "resource-guide use node(express + art-template) technology stack, it is a SSR project, can by route to render html file.",
     "main": "index.js",
     "dependencies": {
         "art-template": "^4.13.2",
         "aws-serverless-express": "^3.3.6",
         "axios": "^0.19.0",
-        "bluebird": "^3.5.5",
         "body-parser": "^1.18.2",
         "cookie-parser": "^1.4.4",
         "express": "^4.16.2",
         "express-art-template": "^1.0.1",
         "flatted": "^2.0.1",
-        "hiredis": "^0.5.0",
         "http-proxy-middleware": "^0.19.1",
         "node-sass": "^4.12.0",
         "redis": "^2.8.0",
@@ -36,13 +34,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/zillyinc/resource-guide-express.git"
+        "url": "git+https://github.com/camelwu/express-redis.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/zillyinc/resource-guide-express/issues"
+        "url": "git+https://github.com/camelwu/express-redis/issues"
     },
-    "homepage": "https://github.com/zillyinc/resource-guide-express#readme"
+    "homepage": "git+https://github.com/camelwu/express-redis#readme"
 }
