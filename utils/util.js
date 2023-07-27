@@ -1,8 +1,3 @@
-const
-    cleanObjRepeat = require('./cleanObjRepeat'),
-    concatArray = require('./concatArray'),
-    generator = require('./sitemapGenerator'),
-    render = require('./render');
 
 const fs = require('fs');
 const path = require('path')
@@ -217,13 +212,4 @@ function isAssetTypeAnImage(ext) {
         'png', 'jpg', 'jpeg', 'bmp', 'gif', 'webp', 'psd', 'svg', 'tiff'].
         indexOf(ext.toLowerCase()) !== -1;
 }
-module.exports = {
-    parseJson,
-    walkSync,
-    isAssetTypeAnImage,
-    outputJson,
-    cleanObjRepeat,
-    concatArray,
-    generator,
-    render
-}
+module.exports = { parseJson, walkSync, isAssetTypeAnImage, outputJson };
